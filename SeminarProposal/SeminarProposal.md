@@ -27,8 +27,8 @@
     of study so theres on going research being published about this topic thats easily accessble from acm, google scholar, etc.
 
     Cons:
-    There are specific applicaiton of converational interface/bots that are emerging that may have less conclusve evidence for ceratain claims. Topics like this would
-    likely stem from applications such as conversational bots application in fields such as psychology and medicine. The field of conversational bots can get highly technical
+    There are specific applicaitons of converational interface/bots that are emerging that may have less conclusve evidence for ceratain claims. Topics like this would
+    likely stem from applications such as conversational bots application in fields such as psychology and medicine. Additionally the field of conversational bots can get highly technical
     quickly as the softare archietecture revolves highly around the specific algorithms that are being utilized to perform tasks such as NLP, CI, etc. For an overview of 
     conversational interfaces/bots looking at these technologies from a high level will likely be necessary.
 
