@@ -1,13 +1,18 @@
 # Comp 680 Seminar Proposal
+
 ## Group Number: 
+
     5
+
 ## Team Members: 
+
 	Archana Ravi
 	Sai Krishna P
 	Darshi
 	Cristian Gutierrez
 
 ## Team Website:
+
     Summary:
 	We're convinced that doing this topic is meaningful due to the ever increasing need for buisness to provide constant suppport
     for their customers. Industires such as education, medical, mobile (personal assistants), are all implementing converstaional interfaces/bots
@@ -27,13 +32,13 @@
     conversational interfaces/bots looking at these technologies from a high level will likely be necessary.
 
 ## Seminar 1
+
     
 
 ## Seminar 2
 
-
-
 ## Papers related to chatbots
+
     - Chatbots: Are they really useful?: https://www.academia.edu/download/35586044/Bayan_Abu-Shawar_and_Eric_Atwell.pdf
     - CHATBOT: Architecture, design, & development:  https://www.academia.edu/download/57035006/CHATBOT_thesis_final.pdf
     - An Overview of Chatbot Technology: https://link.springer.com/chapter/10.1007/978-3-030-49186-4_31
