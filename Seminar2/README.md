@@ -10,7 +10,7 @@
 	Darshi
 	Cristian Gutierrez
 
-## Seminar 1
+## Seminar 2
     Topics:
 
     Implementation Guide:
