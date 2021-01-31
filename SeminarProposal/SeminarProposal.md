@@ -33,10 +33,12 @@
     conversational interfaces/bots looking at these technologies from a high level will likely be necessary.
 
 ## Seminar 1
-
-    
+    Topics:
+    Implementation Guide:
 
 ## Seminar 2
+    Topics:
+    Implementation Guide:
 
 ## Papers related to chatbots
 
