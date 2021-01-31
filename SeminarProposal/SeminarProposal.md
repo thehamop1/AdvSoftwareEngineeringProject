@@ -15,10 +15,11 @@
 
     Summary:
 	We're convinced that doing this topic is meaningful due to the ever increasing need for buisness to provide constant suppport
-    for their customers. Industires such as education, medical, mobile (personal assistants), are all implementing converstaional interfaces/bots
-    in order to fulfill specific buisness needs. As converstaional bots become more prevalenat in different industries different software architectures
-    will be developed based on buisness needs therefore there's an increasing need to study different software architectures specific to converational bots 
-    in order to effictively implement these solutions in the real world. 
+    for their customers. Industires such as education, medicine, and mobile (personal assistants) are all implementing converstaional interfaces/bots
+    in order to fulfill specific buisness needs. As converstaional bots become more prevalenat in different industries new software architectures
+    will be developed based on buisness needs therefore there is an increasing need to study different software architectures specific to converational bots 
+    in order to effictively implement these solutions in the real world. Additionally as buisness are removing the need for GUI's via converstaional interfaces/bots
+    a whole host of human-computer interaction challenges. 
 
     Pros:
     The pros of choosing converstional interfaces/bots for a seminar topic are that ceratin applications of converstaional interfaces/bots are highly developed
@@ -42,3 +43,5 @@
     - Chatbots: Are they really useful?: https://www.academia.edu/download/35586044/Bayan_Abu-Shawar_and_Eric_Atwell.pdf
     - CHATBOT: Architecture, design, & development:  https://www.academia.edu/download/57035006/CHATBOT_thesis_final.pdf
     - An Overview of Chatbot Technology: https://link.springer.com/chapter/10.1007/978-3-030-49186-4_31
+    - Designing Conversational Interfaces to Reduce Dissonance: https://dl.acm.org/doi/abs/10.1145/3197391.3205439
+    - https://www.scienceopen.com/hosted-document?doi=10.14236/ewic/HCI2018.21: https://www.scienceopen.com/hosted-document?doi=10.14236/ewic/HCI2018.21
