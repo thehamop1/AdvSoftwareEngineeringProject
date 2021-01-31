@@ -6,12 +6,12 @@
 
 ## Group Members
 
-    | Name               | Github                       |
-    | ------------------ | ---------------------------- |
-    | Cristian Gutierrez | https://github.com/thehamop1 |
-    | Archana Ravi       | https://github.com/          |
-    | Darshi             | https://github.com/          |
-    | Sai Krishna P      | https://github.com/          |
+    | Name               | Github                            |
+    | ------------------ | --------------------------------- |
+    | Cristian Gutierrez | https://github.com/thehamop1      |
+    | Archana Ravi       | https://github.com/darshikasondra |
+    | Darshi Kasondra    | https://github.com/               |
 
 ## Topic
+
     - Converational Interfaces/Bots

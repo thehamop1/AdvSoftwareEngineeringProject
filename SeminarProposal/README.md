@@ -7,8 +7,7 @@
 ## Team Members: 
 
 	Archana Ravi
-	Sai Krishna P
-	Darshi
+	Darshi Kasondra
 	Cristian Gutierrez
 
 ## Team Website:
