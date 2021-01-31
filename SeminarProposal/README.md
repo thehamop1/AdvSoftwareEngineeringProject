@@ -46,4 +46,4 @@
     - CHATBOT: Architecture, design, & development:  https://www.academia.edu/download/57035006/CHATBOT_thesis_final.pdf
     - An Overview of Chatbot Technology: https://link.springer.com/chapter/10.1007/978-3-030-49186-4_31
     - Designing Conversational Interfaces to Reduce Dissonance: https://dl.acm.org/doi/abs/10.1145/3197391.3205439
-    - Measuring User Experience in Conversational Interfaces: A Comparison of Six Questionnaires: https://www.scienceopen.com/hosted-document?doi=10.14236/ewic/HCI2018.21: https://www.scienceopen.com/hosted-document?doi=10.14236/ewic/HCI2018.21
+    - Measuring User Experience in Conversational Interfaces: A Comparison of Six Questionnaires: https://www.scienceopen.com/document_file/24d11410-aa32-4601-b8f5-0e781135d61a/ScienceOpen/BHCI-2018_Kocaballi%20A.pdf
