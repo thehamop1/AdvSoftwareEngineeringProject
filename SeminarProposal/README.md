@@ -33,11 +33,21 @@
 
 ## Seminar 1
     Topics:
+        - What are converational interfaces/bots
+        - What are the differnet categories of converational interfaces/bots
+        - What industries are using CI/bots?
+        - Examples of Successful CI/bots
+        - What platforms do these belong on?
+
     Implementation Guide:
+        TBD
 
 ## Seminar 2
     Topics:
+        - Common software architectures for conversational interfaces/bots
+
     Implementation Guide:
+        TBD
 
 ## Papers related to chatbots
 
