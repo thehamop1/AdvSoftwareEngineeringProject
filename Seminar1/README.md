@@ -14,3 +14,8 @@
     Topics:
 
     Implementation Guide:
+
+
+# View the presentation here
+
+https://thehamop1.github.io/AdvSoftwareEngineeringProject/Seminar1
