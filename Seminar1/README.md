@@ -7,7 +7,6 @@
 ## Team Members: 
 
 	Archana Ravi
-	Sai Krishna P
 	Darshi
 	Cristian Gutierrez
 
