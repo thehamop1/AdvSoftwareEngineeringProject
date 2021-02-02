@@ -44,7 +44,11 @@
 
 ## Seminar 2
     Topics:
+        - AI Technologies
         - Common software architectures for conversational interfaces/bots
+        - AI Frameworks
+        - Interfaces
+        - User Experience
 
     Implementation Guide:
         TBD
