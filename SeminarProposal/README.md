@@ -34,9 +34,6 @@ lang: en-US
         - Examples of Successful CI/bots
         - What platforms do these belong on?
 
-    Implementation Guide:
-        TBD
-
 ## Seminar 2
     Topics:
         - AI Technologies
@@ -44,9 +41,7 @@ lang: en-US
         - AI Frameworks
         - Interfaces
         - User Experience
-
-    Implementation Guide:
-        TBD
+        - Introduce Implementation Guides
 
 ## Papers related to chatbots
 
