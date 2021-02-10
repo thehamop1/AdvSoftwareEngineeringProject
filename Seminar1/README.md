@@ -2,14 +2,14 @@
 
 ## Group Number: 
 
-    5
+    7
 
 ## Team Members: 
 
 	Archana Ravi
-	Sai Krishna P
-	Darshi
+	Darshi Kasondra
 	Cristian Gutierrez
+    Mounica Dingari
 
 ## Seminar 1
 

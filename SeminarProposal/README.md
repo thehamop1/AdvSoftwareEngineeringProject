@@ -1,35 +1,31 @@
+---
+lang: en-US
+---
+
 # Comp 680 Seminar Proposal
 
 ## Group Number: 
 
-    5
+    7
 
 ## Team Members: 
 
 	Archana Ravi
 	Darshi Kasondra
 	Cristian Gutierrez
+    Mounica Dingari
 
 ## Team Website:
 
     Summary:
-	We're convinced that doing this topic is meaningful due to the ever increasing need for buisness to provide constant suppport
-    for their customers. Industires such as education, medicine, and mobile (personal assistants) are all implementing converstaional interfaces/bots
-    in order to fulfill specific buisness needs. As converstaional bots become more prevalenat in different industries new software architectures
-    will be developed based on buisness needs therefore there is an increasing need to study different software architectures specific to converational bots 
-    in order to effictively implement these solutions in the real world. Additionally as buisness are removing the need for GUI's via converstaional interfaces/bots
-    a whole host of human-computer interaction challenges. 
+    We're convinced that doing this topic is meaningful due to the increasing need for business to provide constant support for their customers. Industries such as education, medicine, and mobile (personal assistants) are all implementing conversational interfaces/bots in order to fulfil specific business needs. As conversational bots become more prevalent in different industries new software architectures will be developed based on these needs there is an increasing need to study different software architectures specific to conversational bots in order to effectively implement these solutions in the real world. Additionally as business are removing the need for GUI's with auditory conversational interfaces/bots a whole host of human-computer interaction challenges. 
 
     Pros:
-    The pros of choosing converstional interfaces/bots for a seminar topic are that ceratin applications of converstaional interfaces/bots are highly developed
-    and the industry has a mature understanding of how these techologies should be used in these contexts. Additonally conversational bots are an attractive field
-    of study so theres on going research being published about this topic thats easily accessble from acm, google scholar, etc.
+    The pros of choosing conversional interfaces/bots for a seminar topic are that certain applications of conversational interfaces/bots are highly developed and the industry has a mature understanding of how these technologies should be used in these contexts. Additionally conversational bots are an attractive field of study so there's on going research being published about this topic that's easily accessible from ACM, google scholar, etc.
 
     Cons:
-    There are specific applicaitons of converational interface/bots that are emerging that may have less conclusve evidence for ceratain claims. Topics like this would
-    likely stem from applications such as conversational bots application in fields such as psychology and medicine. Additionally the field of conversational bots can get highly technical
-    quickly as the softare archietecture revolves highly around the specific algorithms that are being utilized to perform tasks such as NLP, CI, etc. For an overview of 
-    conversational interfaces/bots looking at these technologies from a high level will likely be necessary.
+    There are specific applications of conversational interface/bots that are emerging that may have less conclusive evidence for certain claims. Topics like this would likely stem from applications such as conversational bots application in fields such as psychology and medicine. Additionally the field of conversational bots can get highly technical quickly as the software architecture revolves highly around the specific algorithms that are being utilized to perform tasks such as NLP, CI, etc. For an overview of conversational interfaces/bots looking at these technologies from a high level will likely be necessary.
+
 
 ## Seminar 1
     Topics:
@@ -39,9 +35,6 @@
         - Examples of Successful CI/bots
         - What platforms do these belong on?
 
-    Implementation Guide:
-        TBD
-
 ## Seminar 2
     Topics:
         - AI Technologies
@@ -49,9 +42,7 @@
         - AI Frameworks
         - Interfaces
         - User Experience
-
-    Implementation Guide:
-        TBD
+        - Introduce Implementation Guides
 
 ## Papers related to chatbots
 
@@ -60,3 +51,5 @@
     - An Overview of Chatbot Technology: https://link.springer.com/chapter/10.1007/978-3-030-49186-4_31
     - Designing Conversational Interfaces to Reduce Dissonance: https://dl.acm.org/doi/abs/10.1145/3197391.3205439
     - Measuring User Experience in Conversational Interfaces: A Comparison of Six Questionnaires: https://www.scienceopen.com/document_file/24d11410-aa32-4601-b8f5-0e781135d61a/ScienceOpen/BHCI-2018_Kocaballi%20A.pdf
+    - A Smart Advisor for Software Delivery - A Bot Framework for Awareness, Alerts and Advice: https://ieeexplore.ieee.org/abstract/document/8823628
+    - Medbot: Conversational  Artificial Intelligence Powered Chatbot for Delivering Tele-Health after COVID-19: https://ieeexplore.ieee.org/abstract/document/9137944
