@@ -6,14 +6,18 @@
   - Rule based
   - Pattern Matching
   - NLP vs NLU
+  - Ml based
   - AIML (Ties into DialogFlow markup)
   - Tie into current technology
 - What are the differnet categories of converational interfaces/bots
-  - Rule based
-  - Ml based
+  - Support chat bots
+  - Skills chat bots
+  - Transactional bots
+  - Informational
 - What industries are using CI/bots?
   - Entertainment
   - E-Commerce
+  - Education
   - Banking
   - Travel
   - ETC.
@@ -40,3 +44,4 @@
   - Textual vs Auditory Designs
   - Show examples
 - Reference Architecture
+  - Example: https://www.ibm.com/cloud/architecture/architectures/cognitiveConversationDomain/reference-architecture/
