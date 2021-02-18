@@ -13,9 +13,24 @@
   - Ml based
 - What industries are using CI/bots?
   - Entertainment
-  - 
+  - E-Commerce
+  - Banking
+  - Travel
+  - ETC.
 - Examples of Successful CI/bots
-  - 
+  - Google Assitant
+  - Siri
+  - Facebook Bots
+  - Discord Bots
+- Concepts (https://cloud.google.com/dialogflow/es/docs/concepts)
+  - Concept of Agents
+  - Concept of Intents
+  - Concept of Entities
+  - Concept of Contexts
+  - Concept of Events
+  - Concept of Fulfillment
+  - Concept of Flow
+  - Concept of Repair
 - Current services that provide converational interfaces via API service (Explain how they each work at high level)
   - DialogFlow
   - Google Actions v3 api
@@ -23,6 +38,5 @@
   - Microsoft Bot Builder SDK
 - What platforms do these belong on?
   - Textual vs Auditory Designs
-    - Concept of Flow
-    - Concept of Repair
+  - Show examples
 - Reference Architecture
