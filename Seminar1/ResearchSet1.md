@@ -52,3 +52,6 @@
       5. Information Extraction
       6. Response Generation (MOST IMPORTANT)
       7. Information Retrieval
+
+# Current state of security related to chat bots
+    - "While the above privacy violations are un-intended by the bot creators, chatbot users expose themselves to the possibility of intentionally malicious chatbots, created to exploit their users. Already, there exist an extensive number of spam-bots that exist to send spam to internet users. While these bots are detectable, and often shut down, the improving conversation abilities of bots will make it easier for malicious bots to disguise themselves. These chatbots, able to build trust with users, may be programmed to exploit that trust, sell products, infect computer with malware, and steal identity information. [77] Lauinger et. al.’s chatbot HoneyBot, for example, achieved a click-through rate of 37% sending phishing messaging using a man-in-the-middle attack. [78]" - CHATBOT: Architecture, Design, & Development J -ack Cahn
