@@ -21,6 +21,7 @@
     - Embodied Agent
         - This type of agent is the final extension of the first two. It not only understands the user and can provide relavant data back to the user but it can also be percived as human-like by the user. The first chat bots (which were rule based) were even given names in order to create this illusion. Today in the UX design of conversational interfaces the concept of a persona still exists. Think of the voices you can select in personal assistants. (Immitation Game via Turing)
 # History
+    - Claim: Speach is so natural to humans its widely regarded as the future of human computer interaction.
     - Plenty of historical bots exist and were often created as proofs of concepts and toys. For example ELIZA, ALICE, and even the emacs Psycotherapist were chatbots created during the early days of chat bots. Many of these used markup languages in order to perform pattern matching. For example ALICE had its own markup language (an extension of XML) created in order for maintainers to add patterns to match against. These are commonly known today as intenets and something found in IBM watson and DialogFlow (Google). It wasnt until later that Machine Learning techniques were devleoped in order to solve the maintability issue of pattern matching techniques. These two types of technologies are the methods that most APIs use now. 
 # Performance
     - Depending on the lense that you choose to evaluate a chat bot from you might get varying levels of performance. In the context of software engineering in most buisness contexts the metric that should be used is user satisfaction.
@@ -43,4 +44,11 @@
           - The user can export data from the bot
           - The bot can access external body of knowldege
 # Design
-    - 
+    - Steps:
+      1. ASR (Automatic Speech Recognition)
+      2. Natural Language Processing/Understanding
+      3. Dialog Act Recognition 
+      4. Intent Identification
+      5. Information Extraction
+      6. Response Generation (MOST IMPORTANT)
+      7. Information Retrieval
