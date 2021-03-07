@@ -30,13 +30,11 @@
     - As a user I want to be able to clearly understand how the application is structured
 
 ## Technical Tasks
-    - Set a VS Code on everyones machine
     - Verify all members have access to the repository
     - Fill in backlog
     - Read API docs
     - Find resources for the stack we're using
     - Distribute tasks among members
-    - Design an interface (voice/text GUI)
 
 # Sprint 1
 ## Business Goal/Objective
