@@ -9,10 +9,6 @@
 	Darshi Kasondra
 	Cristian Gutierrez
     Mounica Dingari
-## Seminar 2
-    Topics:
-
-    Implementation Guide:
 
 ## Seminar Outline
 1. Introduction from where we left off last time
