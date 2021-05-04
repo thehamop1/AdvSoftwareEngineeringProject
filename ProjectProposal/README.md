@@ -2,11 +2,10 @@
     - The goal of this project is to implement a conversational interface to source control. The application will use either voice or text as a means for the user to interface with the source control application. The application will allow the user to make queries to the source control database (git history). This should allow non-experienced users to gain information about their projects.  
 
 # Technology Stack
-    - Python (If a backend is needed)
-    - Javascript/React
-    - Google Diagflow ES
+    - NodeJS
+    - Javascript/React (If custom front end needed)
+    - Google Diagflow ES/Google Actions
     - Github API
-    - AWS S3 Bucket
 
 # Sprint 0
 ## Business Goal/Objective
@@ -31,13 +30,11 @@
     - As a user I want to be able to clearly understand how the application is structured
 
 ## Technical Tasks
-    - Set a VS Code on everyones machine
     - Verify all members have access to the repository
     - Fill in backlog
     - Read API docs
     - Find resources for the stack we're using
     - Distribute tasks among members
-    - Design an interface (voice/text GUI)
 
 # Sprint 1
 ## Business Goal/Objective
@@ -64,4 +61,4 @@
     - Have a set of actions a user can perform
     - Have a fully designed interface for the application
         - At the very least this should be a full mock-up depending on the complexity 
-    - A basic set of unit tests
+    - A basic set of tests for the dialogic agent
