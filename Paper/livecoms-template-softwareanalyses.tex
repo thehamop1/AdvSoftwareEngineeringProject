@@ -1,0 +1,202 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% LIVECOMS ARTICLE TEMPLATE FOR BEST PRACTICES GUIDE
+%%% ADAPTED FROM ELIFE ARTICLE TEMPLATE (8/10/2017)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PREAMBLE
+\documentclass[9pt,software]{livecoms}
+% Use the 'onehalfspacing' option for 1.5 line spacing
+% Use the 'doublespacing' option for 2.0 line spacing
+% Use the 'lineno' option for adding line numbers.
+% Use the "ASAPversion' option following article acceptance to add the DOI and relevant dates to the document footer.
+% Use the 'pubversion' option for adding the citation and publication information to the document footer, when the LiveCoMS issue is finalized.
+% The 'bestpractices' option for indicates that this is a best practices guide.
+% Omit the bestpractices option to remove the marking as a LiveCoMS paper.
+% Please note that these options may affect formatting.
+
+\usepackage{lipsum} % Required to insert dummy text
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\DeclareSIUnit\Molar{M}
+\usepackage[italic]{mathastext}
+\graphicspath{{figures/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% IMPORTANT USER CONFIGURATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\versionnumber}{1.0}  % you should update the minor version number in preprints and major version number of submissions.
+\newcommand{\githubrepository}{\url{https://github.com/thehamop1/AdvSoftwareEngineeringProject}}  %this should be the main github repository for this article
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ARTICLE SETUP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Designing a scalable Conversational Interfaces}
+
+\author[1\authfn{3}]{Cristian Gutierrez}
+\author[1\authfn{3}]{Darshi Kasondra}
+\author[1\authfn{3}]{Archana Ravi}
+\author[1\authfn{3}]{Mounica Dingari}
+\affil[1]{California State University of Northridge}
+
+\corr{cristian.gutierrez.56@my.csun.edu}{CG}  % Correspondence emails.  FMS and FS are the appropriate authors initials.
+
+\presentadd[\authfn{3}]{Department of Engineering and Computer Science, California State University of Northridge, United States of America}
+
+\blurb{Additional work related to this paper can be fournd at \githubrepository;}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PUBLICATION INFORMATION
+%%% Fill out these parameters when available
+%%% These are used when the "pubversion" option is invoked
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pubDOI{10.XXXX/YYYYYYY}
+\pubvolume{<volume>}
+\pubissue{<issue>}
+\pubyear{<year>}
+\articlenum{<number>}
+\datereceived{Day Month Year}
+\dateaccepted{Day Month Year}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ARTICLE START
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{frontmatter}
+\maketitle
+
+\begin{abstract}
+The way we use interact with systems is contantly evolving with new advances in technology. As buisness continue to need flexible user
+interfaces many of them are implementing conversatinal interfaces in order to fufill customer needs without having to require users
+to learn how to use an entirely seperate application in order to make transactions. Modern conversatinal interfaces are fairly powerful 
+with recent adavancements in natural language processing, integration with mobile asistants, and flexible frameworks. In this paper we 
+provide background to some of the concepts of conversatinal interfaces, examing the current state of commercially available
+solutions, and provide a reference architecture for implementing a system centered around a conversatinal interface.
+\end{abstract}
+
+\end{frontmatter}
+
+\section{Introduction}
+
+\subsection{Previous Work, Methods, Procedures}
+There is a growing need for approchable user interfaces as more interactions become digital. For example banking, transactions, and flights
+are all largely growing to be digital. In order to easily accessed and usable for all types of users conversatinal interfaces are the most 
+ideal due to their low learning curve. If a user can use their native language in order to complete actions on any given system the need for
+24/7 support or complex user interfaces become obsolete. This allows buisness to keep user satisfaction high while keeping costs low. Additionally
+it provides several benefits to users as they are able to access data from large databases easily, complete transactions even if their not so tech savy,
+have multilingual support, and have 24/7 support.
+
+\subsection{Previous Work, Methods, Procedures}
+The development and interest of conversatinal interfaces was has been a subject of interest since the 1970's. Early examples of these
+early chatbots include ELIZA, ALICE, and PARRY. Many of these early chatbots worked with the use of simple pattern matching. This simple 
+regular expression based matching was combined with a tree design for controlling the flow of conversations. One of the major drawbacks of 
+this naive form of design was the frequent matching of user utterances with conversation points that happened further up the tree. This 
+would often lead to looping conversations. Researchers at the time had to develop markup based langugues such as AIML in order to develop 
+expert systems. These large complex forms of nested databases had to be constantly maintined in order to add new features to these chatbots. 
+With the modern development of machine learning algorithms in order to parse and extract meaning from user utterances. Many commercial solutions
+for developing conversatinal interfaces are now widely available and come with many integrations for various platforms.
+
+\subsection{Background}
+There are some basic concepts that are universal to most conversatinal interface platforms. The first is the user utterance which can either come in 
+the form of a text entry or speech with the use of a microphone. Additional signal processing is required to transcribe the audio signals into text. 
+This text is usually normalized where all text has its puntuation removed and all letters are moved into the same letter case. Next depending on the 
+platform various machine learning algorithms are used in order to extract certain key tokens from the string. The most intent which is the objective
+of the user. For example the utterance "What is the weather in Los Angeles" would have the intenet of weather. This is a topic that the application
+would have to be designed to respond to. Next would be entities which are certain tokens the application will use to complete requests once an intenet
+has been deduced.
+
+\section{Methodology}
+
+Here (and in other sections if needed) you would describe how you compared the software in question, with subsections as needed.
+Perhaps you may also need to comment here on why you did not include certain pieces of software or how these might be included in the future.
+
+\subsection{Physical systems and properties}
+
+What did you calculate, on what systems? Why did you make that choice?
+
+\subsection{Methodology for comparison}
+How did you compute what you're comparing?
+What software versions did you use?
+How would the software be accessed?
+
+
+\subsubsection{Method selection}
+How did you select which protocols to use? How are you certain these are representative? Would a naive user get similar performance?
+
+\subsubsection{Supporting files}
+Are there run scripts or files others would need to reproduce your work? Are these provided in your GitHub repo, or how would they be accessed?
+How exactly would someone reproduce/extend this work?
+
+\subsubsection{Error analysis}
+You may wish to devote particular attention to error analysis.
+
+
+\section{Results}
+
+You would give results.
+
+
+\section{Discussion and conclusions}
+
+You may perhaps wish to revisit the issue of what performance a naive user might expect, here.
+
+
+
+\section{Author Contributions}
+%%%%%%%%%%%%%%%%
+% This section mustt describe the actual contributions of
+% author. Since this is an electronic-only journal, there is
+% no length limit when you describe the authors' contributions,
+% so we recommend describing what they actually did rather than
+% simply categorizing them in a small number of
+% predefined roles as might be done in other journals.
+%
+% See the policies ``Policies on Authorship'' section of https://livecoms.github.io
+% for more information on deciding on authorship and author order.
+%%%%%%%%%%%%%%%%
+
+(Explain the contributions of the different authors here)
+
+% We suggest you preserve this comment:
+For a more detailed description of author contributions,
+see the GitHub issue tracking and changelog at \githubrepository.
+
+\section{Other Contributions}
+%%%%%%%%%%%%%%%
+% You should include all people who have filed issues that were
+% accepted into the paper, or that upon discussion altered what was in the paper.
+% Multiple significant contributions might mean that the contributor
+% should be moved to authorship at the discretion of the a
+%
+% See the policies ``Policies on Authorship'' section of https://livecoms.github.io for
+% more information on deciding on authorship and author order.
+%%%%%%%%%%%%%%%
+
+% (Explain the contributions of any non-author contributors here)
+% We suggest you preserve this comment:
+% For a more detailed description of contributions from the community and others, see the GitHub issue tracking and changelog at \githubrepository.
+
+% \section{Potentially Conflicting Interests}
+%%%%%%%
+%Declare any potentially competing interests, financial or otherwise
+%%%%%%%
+
+% Declare any potentially conflicting interests here, whether or not they pose an actual conflict in your view.
+
+% \section{Funding Information}
+%%%%%%%
+% Authors should acknowledge funding sources here. Reference specific grants.
+%%%%%%%
+% FMS acknowledges the support of NSF grant CHE-1111111.
+
+% \bibliography{livecoms-sample}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% APPENDICES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\appendix
+
+
+\end{document}
