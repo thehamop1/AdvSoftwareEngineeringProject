@@ -18,7 +18,7 @@
 \usepackage{siunitx}
 \DeclareSIUnit\Molar{M}
 \usepackage[italic]{mathastext}
-\graphicspath{{figures/}}
+\graphicspath{{pictures/}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% IMPORTANT USER CONFIGURATION
@@ -86,7 +86,6 @@ ideal due to their low learning curve. If a user can use their native language i
 24/7 support or complex user interfaces become obsolete. This allows buisness to keep user satisfaction high while keeping costs low. Additionally
 it provides several benefits to users as they are able to access data from large databases easily, complete transactions even if their not so tech savy,
 have multilingual support, and have 24/7 support.
-
 \subsection{Previous Work, Methods, Procedures}
 The development and interest of conversatinal interfaces was has been a subject of interest since the 1970's. Early examples of these
 early chatbots include ELIZA, ALICE, and PARRY. Many of these early chatbots worked with the use of simple pattern matching. This simple 
@@ -96,7 +95,6 @@ would often lead to looping conversations. Researchers at the time had to develo
 expert systems. These large complex forms of nested databases had to be constantly maintined in order to add new features to these chatbots. 
 With the modern development of machine learning algorithms in order to parse and extract meaning from user utterances. Many commercial solutions
 for developing conversatinal interfaces are now widely available and come with many integrations for various platforms.
-
 \subsection{Background}
 There are some basic concepts that are universal to most conversatinal interface platforms. The first is the user utterance which can either come in 
 the form of a text entry or speech with the use of a microphone. Additional signal processing is required to transcribe the audio signals into text. 
@@ -105,6 +103,61 @@ platform various machine learning algorithms are used in order to extract certai
 of the user. For example the utterance "What is the weather in Los Angeles" would have the intenet of weather. This is a topic that the application
 would have to be designed to respond to. Next would be entities which are certain tokens the application will use to complete requests once an intenet
 has been deduced.
+
+\section{Implementation Guide}
+\subsection{Use Cases}
+The following implementation guide was designed with the assumption that it would be used in a buisness context such as 
+e-commerce site, resturant, or customer support. Additionally little sensitive information would be transmitted between the 
+conversatinal interface and the service could be an addition to existing buisness infrastructure. Additionally this 
+Implementation guide is more suitable for small to medium sized buisness who are looking to provide the user with 
+the ability to retrieve basic data and transactions.
+
+An example use case for this reference architecture would be a small chain of resturants. In this scenario a customer may
+want to make reservations for instance while the resturant is closed. In this scenario integrating a conversatinal interface 
+on the buisnesses website and mobile assistant would provide the user with the ability to create or cancel reservations while 
+the buisness is currently closed. Even customers with little knowledge of how to browse the internet or create reservations online
+would be able to interact with their mobile asistants in order to interact with the system.  
+
+\subsection{Technical Stack}
+For this particular implementation guide a stack such as ReactJs, SQL, nodejs, dialogflow, and Google Assistant/Siri would be used. NodeJS would
+be used on the lambda functions and buisness enterprise. Any in buisness databases would be created with an SQL flavor and an ORM such as 
+knex.js would be used to store various information. If a buisness did not have an existing website it would be created in ReactJS, alternatively 
+if an existing website was already available a simple iframe based solution could be used from the existing dialogflow API integrations.
+
+As stated before any interaction needed with existing buisness infrastructure could be handled with lambda funcitons. The existing library most 
+supported by the Dialogflow API is NodeJS. It is extermly cost effective and easy to integrate using Google Cloud Functions. In order to full take
+advantage of deploying to various platforms different buisness logic needs to created to interact with various front-ends. The Dialogflow API allows
+you to create specific reponses based on the clients platform in order not to overwhelm the client with long responses or provide more relevant information
+to the user.  
+
+An added benefit to using lambda functions is that all of the heavy machine learning processing is carried out on the Dialogflow API side so no heavy
+processing is required within the runtime of the lambda itself. This allows the call from the client to be quickly parsed via a RESTful API call and 
+intenets, entities, and context can already be deduced ahead of time. By allowing the buisness logic to be compeltley free of all machine learning it allows
+the particular buisness implemnting the system save money on renting a fully dedicated server to run the machine learning algorithm. Keep in mind that although
+the use of lambda functions reduces cost there is an additonal cost required for every call to the Dialogflow service. Additionally the version of the DialogFlow API 
+used also factors into cost. If the complexity of the conversations are relativley simple version 2 of the API can be used to increase savings on this implementation.
+
+Lastly in terms of getting a voice enabled conversatinal interface for this systmem would require the use of the newer DialogFlow V3 API or the use of a deprecated 
+API in order to interface wtih the older DialogFlow version 2. Although this option is available using the newer nodejs package it is highly discouraged as this part
+of the library is no longer receiveing updates. Additionally in order to connect this service to iOS an additionial layer of buisness logic has to be placed between the 
+dialogflow API calls and the Siri front-end. The buisness should consider the development cost required in order to keep iOS integration supported versus how 
+benefical it is from a buisness stand-point to keep it supported. 
+
+\subsection{Cost Benefit Analysis}
+In order to understand the on-going cost of having lambda function costs and DialogFlow API calls the following charts should be considered when 
+considering the benefit of adding a converstaional interface to an e-commerce site. 
+
+\begin{figure}
+  \caption{DialogFlow Version 2}
+  \centering
+    \includegraphics[width=0.5\textwidth]{ESAgent.PNG}
+\end{figure}
+
+\begin{figure}
+  \caption{DialogFlow Version 3}
+  \centering
+    \includegraphics[width=0.5\textwidth]{CX_Agent.PNG}
+\end{figure}
 
 % \section{Methodology}
 
@@ -190,7 +243,7 @@ has been deduced.
 %%%%%%%
 % FMS acknowledges the support of NSF grant CHE-1111111.
 
-% \bibliography{livecoms-sample}
+\bibliography{livecomsm-template-softwareanalyses}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% APPENDICES
