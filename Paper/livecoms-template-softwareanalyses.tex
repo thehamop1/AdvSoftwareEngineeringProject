@@ -124,8 +124,8 @@ be used on the lambda functions and buisness enterprise. Any in buisness databas
 knex.js would be used to store various information. If a buisness did not have an existing website it would be created in ReactJS, alternatively 
 if an existing website was already available a simple iframe based solution could be used from the existing dialogflow API integrations.
 
-As stated before any interaction needed with existing buisness infrastructure could be handled with lambda funcitons. The existing library most 
-supported by the Dialogflow API is NodeJS. It is extermly cost effective and easy to integrate using Google Cloud Functions. In order to full take
+As stated before any interaction needed with existing buisness infrastructure could be handled with lambda funcitons. The existing language most 
+supported by the Dialogflow API is NodeJS. It is extermly cost effective and easy to integrate using Google Cloud Functions. In order to fully take
 advantage of deploying to various platforms different buisness logic needs to created to interact with various front-ends. The Dialogflow API allows
 you to create specific reponses based on the clients platform in order not to overwhelm the client with long responses or provide more relevant information
 to the user.  
@@ -136,6 +136,11 @@ intenets, entities, and context can already be deduced ahead of time. By allowin
 the particular buisness implemnting the system save money on renting a fully dedicated server to run the machine learning algorithm. Keep in mind that although
 the use of lambda functions reduces cost there is an additonal cost required for every call to the Dialogflow service. Additionally the version of the DialogFlow API 
 used also factors into cost. If the complexity of the conversations are relativley simple version 2 of the API can be used to increase savings on this implementation.
+
+The Dialogflow dashboard would need to be trained using a set of sample training data. Most of the internal machine learning algorithms are abstracted on this platform. 
+What this means for the buisness trying to develop their platform with this tool is that the develop who they chose to hire doesnt need an extensive background in machine
+learning in order to get things working in the first place. In addition to this sample training data simple regular expressions would be given to the DialogFlow agent in order
+to fall back on when confidence scores get too low. 
 
 Lastly in terms of getting a voice enabled conversatinal interface for this systmem would require the use of the newer DialogFlow V3 API or the use of a deprecated 
 API in order to interface wtih the older DialogFlow version 2. Although this option is available using the newer nodejs package it is highly discouraged as this part
@@ -158,6 +163,29 @@ considering the benefit of adding a converstaional interface to an e-commerce si
   \centering
     \includegraphics[width=0.5\textwidth]{CX_Agent.PNG}
 \end{figure}
+
+As seen above the cost of supporting the converstational interface API version 3 is far different that supporting version 2. If the buisness needs don't demand strict requirements 
+that users will be generating complex utterances then version 2 of the API should be considered. If integration with google assistant and siri is an important feature then it's recommended
+that Google Actions API be used (DialogFlow v3). Additionally the price of Google Cloud Function calls should also be considered. This service has a much lower cost especially if compute times
+are kept low. See Figure 3.
+
+\begin{figure}
+  \caption{Google Cloud Function Pricing}
+  \centering
+    % \includegraphics[width=0.5\textwidth]{ESAgent.PNG}
+\end{figure}
+
+\section{Development Plan}
+\subsection{Configuration Management}
+Within the Google Cloud Function dashboard a repository should be connected as the main source code for the lambda functions that will be servicing DialogFlow requests. This repository should be configured
+with either the Github Flow or Git Flow configuration style. That being said in order to prevent disastrous situation such as a novice developer pushing to the deployment branch Continous Integration should
+be implemented in order to verify that the deployed source code will work in production. Google Cloud can be configured in such a way most of the source conrol lives in Github or Bitbucket where the git server
+can be configured to interact with Jenkins CI or Travis CI. Upon certain actions such as merging to the master the repository can automatically launch the newest source code
+to the active lambdas.
+
+\subsection{Developer Environment}
+
+
 
 % \section{Methodology}
 
