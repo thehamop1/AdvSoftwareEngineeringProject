@@ -104,13 +104,28 @@ of the user. For example the utterance "What is the weather in Los Angeles" woul
 would have to be designed to respond to. Next would be entities which are certain tokens the application will use to complete requests once an intenet
 has been deduced.
 
-\section{Implementation Guide}
+\section{Implementation Guide 1}
+\subsection{Use Cases}
+The following implementation guide was designed with the assumption that a Conversational Interface would be designed for a large enterprise supporting
+a large amount of customers and is required to interface with existing large databases. Refer to reference architecture 1 in order to get a broader overview
+of the different services that could integrate with this architecture. This guide will primarily be based on using microsoft azure. alternatively a platform
+such as AWS or IBM Jarvis could be used to accomplish the same things. An environment such as healthcare or airlines would be most appropriate for this type
+of system. Given the example of airlines a conversational interface to book, change, and check the status of flight could be created to give users the ability
+to interact with their travel plans via Google Assistant or Siri.
+
+\subsection{Technical Stack}
+For this technical stack C# is highly recommended as it's offical library has the most chat based front-ends to integrate. A community devleoped library exists
+for several languages that give additional functionality with chat platforms if required..
+
+\section{Implementation Guide 2}
+
 \subsection{Use Cases}
 The following implementation guide was designed with the assumption that it would be used in a buisness context such as 
 e-commerce site, resturant, or customer support. Additionally little sensitive information would be transmitted between the 
 conversatinal interface and the service could be an addition to existing buisness infrastructure. Additionally this 
 Implementation guide is more suitable for small to medium sized buisness who are looking to provide the user with 
-the ability to retrieve basic data and transactions.
+the ability to retrieve basic data and transactions. Refer to Figure 1 for a reference architecture for this guide (The seperation of logic
+should be similar however the frameworks themeselves have been switched in order to support Google DialogFlow V2/V3).
 
 An example use case for this reference architecture would be a small chain of resturants. In this scenario a customer may
 want to make reservations for instance while the resturant is closed. In this scenario integrating a conversatinal interface 
@@ -172,7 +187,7 @@ are kept low. See Figure 3.
 \begin{figure}
   \caption{Google Cloud Function Pricing}
   \centering
-    % \includegraphics[width=0.5\textwidth]{ESAgent.PNG}
+    \includegraphics[width=0.5\textwidth]{GCloudFunction.PNG}
 \end{figure}
 
 \section{Development Plan}
@@ -183,11 +198,22 @@ be implemented in order to verify that the deployed source code will work in pro
 can be configured to interact with Jenkins CI or Travis CI. Upon certain actions such as merging to the master the repository can automatically launch the newest source code
 to the active lambdas.
 
-\subsection{Developer Environment}
+\subsection{Development Environment}
+Developers should use an environment where the same version of Node.JS that the Cloud Functions will be using. The appropriate version of DialogFlow for Node.js should be installed along with firebase lambda emulator.
+This package allows developers to locally host a Google Cloud Function. Either ngrok or a similar package should be used in order to provide an https public facing URL in order to test with the DialogFlow 
+agent via the DialogFlow dashboard. Additionally each developer should be given his/her own dashboard in order to connect their publically facing URL and test their code.
 
+\section{Conclusion}
+\subsection{Implementation}
+In order to test our design while being platform agnostic the proposed objective was to create a DialogFlow agent that would interact with Github's RESTful API. Basic function available to the user would be searching
+repositories, querying the git database for logs, merges, and pull requests. The front-end user interfaces would interact with the DialogFlow agent directly and once all necessary entities were detected the dialogflow agent
+would make a request to the Web hook via Google Cloud Function (lambda function). The available front-ends deployed where integrations with Slack, basic web based GUI, and directly from the dashboard. The development enviroment 
+consisted of Visual Studio Code, ngrok, firebase emulator, and the dialogflow test dashboard. A Git repository containing the DialogFlow fufillment code was hosted on Google Cloud where the master branch was set to deploy its newest commit.
 
+\subsection{Challenges}
+Several challenges were faced while implementting this conversrational interface. For example the dialogflow version 2 API was deprecated and full documentation to interact with the agent was no longer provided. Additionally in order to migrate
+an existing workspace from DialogFlow V2 to Google Actions (v3) a length process needed to be followed in order to verify that the paths that the converstation could follow were correct. 
 
-% \section{Methodology}
 
 % Here (and in other sections if needed) you would describe how you compared the software in question, with subsections as needed.
 % Perhaps you may also need to comment here on why you did not include certain pieces of software or how these might be included in the future.
