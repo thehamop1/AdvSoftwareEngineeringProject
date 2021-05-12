@@ -30,7 +30,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% ARTICLE SETUP
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Designing a scalable Conversational Interfaces}
+\title{Designing a scalable Conversational Interface}
 
 \author[1\authfn{3}]{Cristian Gutierrez}
 \author[1\authfn{3}]{Darshi Kasondra}
@@ -64,37 +64,27 @@
 \begin{document}
 
 \begin{frontmatter}
-\maketitle
-
-\begin{abstract}
-The way we use interact with systems is contantly evolving with new advances in technology. As buisness continue to need flexible user
-interfaces many of them are implementing conversatinal interfaces in order to fufill customer needs without having to require users
-to learn how to use an entirely seperate application in order to make transactions. Modern conversatinal interfaces are fairly powerful 
-with recent adavancements in natural language processing, integration with mobile asistants, and flexible frameworks. In this paper we 
-provide background to some of the concepts of conversatinal interfaces, examing the current state of commercially available
-solutions, and provide a reference architecture for implementing a system centered around a conversatinal interface.
-\end{abstract}
-
+  \maketitle
+  
+  \begin{abstract}
+    The way we use interact with systems is contantly evolving with new advances in technology. As buisness continue to need flexible user
+    interfaces many of them are implementing conversatinal interfaces in order to fufill customer needs without having to require users
+    to learn how to use an entirely seperate application in order to make transactions. Modern conversatinal interfaces are fairly powerful 
+    with recent adavancements in natural language processing, integration with mobile asistants, and flexible frameworks. In this paper we 
+    provide background to some of the concepts of conversatinal interfaces, examing the current state of commercially available
+    solutions, and provide a reference architecture for implementing a system centered around a conversatinal interface.
+  \end{abstract}
+  
 \end{frontmatter}
 
 \section{Introduction}
 
-\subsection{Previous Work, Methods, Procedures}
-There is a growing need for approchable user interfaces as more interactions become digital. For example banking, transactions, and flights
-are all largely growing to be digital. In order to easily accessed and usable for all types of users conversatinal interfaces are the most 
-ideal due to their low learning curve. If a user can use their native language in order to complete actions on any given system the need for
-24/7 support or complex user interfaces become obsolete. This allows buisness to keep user satisfaction high while keeping costs low. Additionally
-it provides several benefits to users as they are able to access data from large databases easily, complete transactions even if their not so tech savy,
-have multilingual support, and have 24/7 support.
-\subsection{Previous Work, Methods, Procedures}
-The development and interest of conversatinal interfaces was has been a subject of interest since the 1970's. Early examples of these
-early chatbots include ELIZA, ALICE, and PARRY. Many of these early chatbots worked with the use of simple pattern matching. This simple 
-regular expression based matching was combined with a tree design for controlling the flow of conversations. One of the major drawbacks of 
-this naive form of design was the frequent matching of user utterances with conversation points that happened further up the tree. This 
-would often lead to looping conversations. Researchers at the time had to develop markup based langugues such as AIML in order to develop 
-expert systems. These large complex forms of nested databases had to be constantly maintined in order to add new features to these chatbots. 
-With the modern development of machine learning algorithms in order to parse and extract meaning from user utterances. Many commercial solutions
-for developing conversatinal interfaces are now widely available and come with many integrations for various platforms.
+\subsection{Previous Work}
+The first chatbot named ELIZA was invented in 1966.The ability of the chatbot to communicate with the user was limited as it did not have enough knowledge. PARRY was invented in 1977 with improved features from ELIZA. PARRY also had limitations as it could not learn from the conversations and had low responding speed. Many chatbots were invented after that. All had some limitation either understanding the conversation or had low responding speed. ALICE was invented in 1995 based on the ELIZA. It worked on the pattern-matching algorithm but still had limitations as it did not have intelligent features. Later in the 20th century when Artificial Intelligence started to grow chatbots like Siri and Watson had better understanding and recognizing capabilities than the previous ones. Now, we are looking to make our chatbots more smarter by making it recognize different accents.
+
+\subsection{Current Work}
+With the recent surge of machine learning algorithms we now have a way of saving conversational context, Matching user responses not hardcoded into the system and can provide unique responses with generative models. Pattern matching is still often used in these new technologies as a fall back mechanism.When both machine learning and pattern matching are used if the confidence score of either algorithm is higher that intent is chosen. 
+
 \subsection{Background}
 There are some basic concepts that are universal to most conversatinal interface platforms. The first is the user utterance which can either come in 
 the form of a text entry or speech with the use of a microphone. Additional signal processing is required to transcribe the audio signals into text. 
@@ -104,10 +94,131 @@ of the user. For example the utterance "What is the weather in Los Angeles" woul
 would have to be designed to respond to. Next would be entities which are certain tokens the application will use to complete requests once an intenet
 has been deduced.
 
-\section{Implementation Guide 1}
-\subsection{Use Cases}
+\section{Reference Architecture}
+\subsection{Types Of Bots}
+A somewhat theoretical definition for the types of CI/bots:                      
+Dialogic Agent: This is something that understands the user and generates appropriate responses. 
+Rational Agent :This type of bot must understand the user and also retrieve data from an external source of knowledge often referred to as a corpora of data. In a business context this could be a database or an external API.
+Embodied Agent :This type of agent is the final extension of the first two. It not only understands the user and can provide relevant data back to the user but it can also be perceived as human-like by the user. The first chat bots (which were rule based) were even given names in order to create this illusion. Today in the UX design of conversational interfaces the concept of a persona still exists. Think of the voices you can select in personal assistants.
 
-\subsection{Technical Stack}
+We have referenced two architectures in this paper : 
+\begin{itemize}
+  \item Azure architecture framework
+  \item Using AWS
+\end{itemize}
+
+The generic architecture of conversational bots:
+\begin{figure}
+  \caption{ The architecture of conversational bot}
+  \centering
+  \includegraphics[width=0.5\textwidth]{simpleRef.png}
+\end{figure}
+
+In recent years, serverless architectures (Functions - as-a-Service) are gaining traction as an alternative way  of providing backend services without requiring a  dedicated infrastructure. Serverless allows its users to  deploy their stateless functions into platform  infrastructures. This stateless behavior makes every  invocation independent of the previous runs. For our  application, Firebase Cloud Functions and Google  Cloud Platform as our backend infrastructure is  provided.
+
+\subsection{Azure architecture framework}
+
+We used this as our reference architecture as it was easy for us to use the built in functions from Microsoft when trying to build the bot. The major components of this bot include
+
+\begin{itemize}
+  \item Bot logic and UX 
+  \item Bot cognition and intelligence 
+  \item Data ingestion and logging 
+  \item Monitoring 
+  \item Security and governance 
+  \item Quality assurance and enhancements 
+\end{itemize}
+
+\begin{figure}
+  \caption{Representation of the bot brain and the body}
+  \centering
+  \includegraphics[width=0.5\textwidth]{table.png}
+\end{figure}
+
+
+1) Bot logic and user experience
+Bot Framework Service (BFS). This service connects your bot to a communication app such as Cortana, Facebook Messenger, or Slack. It facilitates communication between your bot and the user.
+Azure App Service. The bot application logic is hosted in Azure App Service.
+
+2) Bot cognition and intelligence
+Language Understanding (LUIS). Part of Azure Cognitive Services, LUIS enables your bot to understand natural language by identifying user intents and entities.
+Azure Search. Search is a managed service that provides a quick searchable document index.
+QnA Maker. QnA Maker is a cloud-based API service that creates a conversational, question-and-answer layer over your data. Typically, it's loaded with semi-structured content such as FAQs. Use it to create a knowledge base for answering natural-language questions.
+Web app. If your bot needs AI solutions not provided by an existing service, you can implement your own custom AI and host it as a web app. This provides a web endpoint for your bot to call.
+
+3)Data ingestion
+The bot will rely on raw data that must be ingested and prepared. Consider any of the following options to orchestrate this process:
+Azure Data Factory. Data Factory orchestrates and automates data movement and data transformation.
+Logic Apps. Logic Apps is a serverless platform for building workflows that integrate applications, data, and services. Logic Apps provides data connectors for many applications, including Office 365.
+Azure Functions. You can use Azure Functions to write custom serverless code that is invoked by a trigger — for example, whenever a document is added to blob storage or Cosmos DB.
+
+4)Logging and monitoring
+Application Insights. Use Application Insights to log the bot's application metrics for monitoring, diagnostic, and analytical purposes.
+Azure Blob Storage. Blob storage is optimized for storing massive amounts of unstructured data.
+Cosmos DB. Cosmos DB is well-suited for storing semi-structured log data such as conversations.
+Power BI. Use Power BI to create monitoring dashboards for your bot.
+
+5) Security and governance
+Azure Active Directory (Azure AD). Users will authenticate through an identity provider such as Azure AD. The Bot Service handles the authentication flow and OAuth token management. See Add authentication to your bot via Azure Bot Service.
+Azure Key Vault. Store credentials and other secrets using Key Vault.
+
+6)Quality assurance and enhancements
+Azure DevOps. Provides many services for app management, including source control, building, testing, deployment, and project tracking.
+VS Code A lightweight code editor for app development. You can use any other IDE with similar features.
+
+
+\begin{figure}
+  \caption{Reference architecture using Azure inbuilt services}
+  \centering
+  \includegraphics[width=0.5\textwidth]{azure.png}
+\end{figure}
+
+Now, Talking about Amazon Web Service Architecture, a Platform for computing at mobile edge. 
+The architecture was broken down focusing on three major areas:
+\subsection{Edge}
+\begin{itemize}
+\item Bringing data processing and analysis closer to end-points
+\item Most extensive global cloud infrastructure
+\item Build more quickly and reduce costs
+\end{itemize}
+
+\subsection{Cloud}
+\subsection{Enterprise applications}
+
+
+
+\section{Implementation Guide 1}
+Chatbots have become a trending topic for organizations. It seems, marketing and artificial intelligence will be great allies in the next few years, while conversational commerce will play in favor of sales teams and social customer care, as well as resource optimization, it will also have significant returns for those in charge of operations. However, you must take into account some recommendations before implementing a chatbot.
+83 percent of respondents in Deloitte’s State of AI Survey said they have achieved moderate or substantial benefits from their work with AI technologies, and 94 percent said AI is very or critically important to their success.
+However, organizations still have plenty to learn about using chatbots in customer support and services scenarios, experts told CMSWire. And they're still making mistakes with such implementations. “One common mistake is many organizations start with ‘proof-of-concepts’ that are designed poorly and fail to support a company’s business objectives,” said Derek Top, research director and senior analyst for Opus Research. “Many firms underestimate the resources and staff necessary to provide a successful chatbot implementation.”
+\subsection{Ensuring Accuracy of Chatbot Engine}
+A company’s first-order concern should revolve around the accuracy of the chatbot “engine,” meaning its ability to correctly recognize end-user intents consistently and at sufficient scale. For many companies, accuracy is a moving target and highly-dependent on how much the data they have to ingest in the form of chat transcripts and other conversations. Contact centers are on the hook to manage a growing number of service channels, and chatbots are becoming a first-tier support option for helping augment the live support and drive efficiencies in the contact center. The goal is to engage customers, when appropriate, to support and answer user questions and take action to decrease costs and optimize service channels.
+
+\subsection{Determining User Needs, Bot Channels}
+Not having a clear goal for the chatbot design leads to an incorrect intent detection, so the bot ends up getting confused and the accuracy the bot has on solving queries drops significantly. Another widespread mistake is not deploying the bot to the proper channels.
+
+\subsection{Purpose, Scripts and Flow}
+Implementing a chatbot entails three steps: Establish the purpose, build the scripts and build the flow. All these must be aligned to a set of KPIs that will measure the performance of our chatbot. We need to define what a user will be able to do and what is going to be left out of the scope. We must understand which business cases are more reasonable to have an assistant for. We must empathize with how the assistant will be invoked by users, in what channels it makes sense for the app or skill to be available. As for flow, that’s when implementation turns to Natural Language Processing (NLP) and session management. Determine and build the required end points on your backend to fulfill the requests of our users. Write down behind-the-scenes decisions the system logic will have to make and finally build test cases and a test plan. Chatbots require specific skills for testing and during testing and new scenarios may arise that should feed the design process or even retrain our NLP model. While building the bot you must add all the necessary data capture points that will guarantee you are collecting the information needed to keep track of the KPIs you defined. Not having the proper metrics could lead to customer dissatisfaction and disengagement.
+
+\subsection{Define the Type of Chatbot You Need}
+Once the line of business and the real needs of each area have been defined, It’s time to define priorities. Possibly a chatbot can support you with more than one activity but, it is important to prioritize and understand the central function of the chatbot:
+
+\subsection{Chatbots Are a Retrieval Mechanism}
+The bottom line is that a customer support chatbot is an information retrieval mechanism. Search is a retrieval mechanism and an intelligent virtual assistant is a retrieval mechanism. And at the end of the day you need some mechanism that says, 'Tell me what you're looking for, or give me a signal.' And the signal is the intent, but the intent can also be enriched by other signals.”
+And it isn’t easy work. "There's a lot of work in refactoring the content," Earley said, "and building the right information architecture and right content... You have to use knowledge engineering approaches.”
+
+
+\begin{itemize}
+\item Sale of products
+\item Customer Support
+\item News Sharing
+\end{itemize}
+
+It is possible to have a hybrid, for example, if among the priorities is improving customer service and to enable new sales channels, you can build a system capable of receiving customer service and making sales, but the evolution must be gradual. First developing the functions that will allow you to cover the needs according to the score and subsequently begin integrating more elements. 
+
+\subsection{Chatbots Are a Retrieval Mechanism}
+The bottom line is that a customer support chatbot is an information retrieval mechanism. Search is a retrieval mechanism and an intelligent virtual assistant is a retrieval mechanism. And at the end of the day you need some mechanism that says, 'Tell me what you're looking for, or give me a signal.' And the signal is the intent, but the intent can also be enriched by other signals.” And it isn’t easy work. "There's a lot of work in refactoring the content," Earley said, "and building the right information architecture and right content... You have to use knowledge engineering approaches.”
+
 
 \section{Implementation Guide 2}
 
@@ -162,13 +273,13 @@ considering the benefit of adding a converstaional interface to an e-commerce si
 \begin{figure}
   \caption{DialogFlow Version 2}
   \centering
-    \includegraphics[width=0.5\textwidth]{ESAgent.PNG}
+  \includegraphics[width=0.5\textwidth]{ESAgent.PNG}
 \end{figure}
 
 \begin{figure}
   \caption{DialogFlow Version 3}
   \centering
-    \includegraphics[width=0.5\textwidth]{CX_Agent.PNG}
+  \includegraphics[width=0.5\textwidth]{CX_Agent.PNG}
 \end{figure}
 
 As seen above the cost of supporting the converstational interface API version 3 is far different that supporting version 2. If the buisness needs don't demand strict requirements 
@@ -179,7 +290,7 @@ are kept low. See Figure 3.
 \begin{figure}
   \caption{Google Cloud Function Pricing}
   \centering
-    \includegraphics[width=0.5\textwidth]{GCloudFunction.PNG}
+  \includegraphics[width=0.5\textwidth]{GCloudFunction.PNG}
 \end{figure}
 
 \section{Development Plan}
@@ -204,7 +315,16 @@ consisted of Visual Studio Code, ngrok, firebase emulator, and the dialogflow te
 
 \subsection{Challenges}
 Several challenges were faced while implementting this conversrational interface. For example the dialogflow version 2 API was deprecated and full documentation to interact with the agent was no longer provided. Additionally in order to migrate
-an existing workspace from DialogFlow V2 to Google Actions (v3) a length process needed to be followed in order to verify that the paths that the converstation could follow were correct. 
+an existing workspace from DialogFlow V2 to Google Actions (v3) a length process needed to be followed in order to verify that the paths that the converstation could follow were correct. Additonally learning how to debug lambda functions on localhost 
+was also a challenge there was sparse docuemntation from Google on how to accomplish this. 
+
+\subsection{A Better Approach}
+A better approach to this type of approach to this problem would be to implement directly with google actions and using ngrok and firebase emulator. By using Google Actions (V3 API) integration with mobile assistants becomes far 
+easier and libraries have far better documenation and support from Google.
+
+\subsection{Future Suggestions}
+An extension to this simple implemenation is to create basic tests for the conversational interface. This would be useful for when conversations become much more complex and have to 
+maintain contexts in order to give appropriate responses. Additionally creating a modular design to the fullfillment code would ensure that any future feature would be easy to integrate.
 
 
 \bibliography{livecomsm-template-softwareanalyses}
